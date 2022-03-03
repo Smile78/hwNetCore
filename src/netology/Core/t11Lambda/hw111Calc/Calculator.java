@@ -1,6 +1,5 @@
-package netology.Core.theme1lambda.hw11Calc;
+package netology.Core.t11Lambda.hw111Calc;
 
-import java.io.IOException;
 import java.util.function.*;
 
 public class Calculator {

@@ -1,4 +1,4 @@
-package netology.Core.theme1lambda.hw12Wrkr;
+package netology.Core.t11Lambda.hw112Wrkr;
 
 public class Main {
 
