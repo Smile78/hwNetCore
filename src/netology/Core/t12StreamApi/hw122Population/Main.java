@@ -24,7 +24,6 @@ public class Main {
             );
         }
 
-
         Stream<Person> streamPers1 = persons.stream();
 
         System.out.println(
@@ -40,7 +39,6 @@ public class Main {
 
         Stream<Person> streamPers2 = persons.stream();
 
-
         List<String> listFmly =
                 streamPers2
                         .filter(x -> x.getSex() == Sex.MAN)
@@ -51,14 +49,12 @@ public class Main {
 
         listFmly.forEach(System.out::println);
 
-
 //  Получить отсортированный !!
 //      по фамилии список потенциально работоспособных людей с высшим образованием в выборке
 //  (т.е. людей
 //      с высшим образованием
 //      от 18 до 60 лет для женщин
 //          и до 65 лет для мужчин).
-
 
         System.out.println("\nCписок потенциально работоспособных людей:");
 
@@ -67,8 +63,9 @@ public class Main {
         List<String> listPipls =
                 streamPers3
                         .filter(x -> x.getEducation() == Education.HIGHER)
-                        .filter(x -> (x.getSex() == Sex.WOMAN) && (x.getAge()) > 18 && (x.getAge()) < 60
-                                || (x.getSex() == Sex.MAN) && (x.getAge()) > 18 && (x.getAge()) < 65)
+                        .filter(x -> x.getAge() > 18)
+                        .filter(x -> (x.getSex() == Sex.WOMAN) &&  (x.getAge()) < 60
+                                  || (x.getSex() == Sex.MAN)   &&  (x.getAge()) < 65)
                         .sorted(Comparator.comparing(Person::getFamily))
                         .map(fio -> fio.getFamily() + " " + fio.getName())
                         .collect(Collectors.toList());
