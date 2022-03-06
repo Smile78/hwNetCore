@@ -1,4 +1,3 @@
-package netology.Core.t13StreamIO.hw133load;
 
 import netology.Core.t13StreamIO.hw132save.GameProgress;
 
@@ -50,8 +49,8 @@ public class Main {
         for (String str : fileLinkList) {
             File newFile = new File(str);
             if (newFile.delete()) System.out.println("Файл " + regFileName(newFile.getName())  + " удален");
-                                                                // можно и без гетНейм
-                                                                // такто регулярка может и весь путь исколючить из названия
+            // можно и без гетНейм
+            // такто регулярка может и весь путь исколючить из названия
         }
     }
 

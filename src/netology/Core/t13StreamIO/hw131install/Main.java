@@ -1,5 +1,6 @@
 package netology.Core.t13StreamIO.hw131install;
 
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -44,23 +45,23 @@ public class Main {
     private static void writeTextInFile(int point, String pathMain, String kat4TxtFile, String fileNameToText, String text2rite) {
 
         log1.append("пункт " + point + " " + "шаг " + cnt++ + " запишем текст из Лога в  файл \n");
-            // потерялось???
+        // потерялось???
 
         try (FileWriter writer = new FileWriter(pathMain + kat4TxtFile +"\\"+ fileNameToText, false)) {
-                                                                                //незабываем что перед файлом надо \\- "указатель директория"!!!
+            //незабываем что перед файлом надо \\- "указатель директория"!!!
             writer.write(text2rite);
             writer.flush();
             System.out.println("Записали чтото в файл успешно ");
-         } catch (IOException ex) {
+        } catch (IOException ex) {
             System.out.println(ex.getMessage());
-         }
+        }
 
     }
 
     public static void main(String[] args) {
 
         String pathMain = "D:\\MOE\\GuglExt\\Coding\\netology\\javaCore\\src\\netology\\Core\\t13StreamIO\\hw131install";
-                                    // путь по дефолту/корень рабочего
+        // путь по дефолту/корень рабочего
         String[] catNames;          // перечень назв.каталогов для создания  или   1го но в массиве
         String kat4newCat;          // путь для созд.нов.каталогов от *корня
         String[] fileNames;         // перечень назв.файлов для создания  или   1го но в массиве
@@ -78,45 +79,45 @@ public class Main {
         kat4newCat = "";
         mkDirMySvrl(point, pathMain, kat4newCat, catNames);
 
-             // 1 В папке Games создайте несколько директорий: src, res, savegames, temp.
+        // 1 В папке Games создайте несколько директорий: src, res, savegames, temp.
         point = 1;
         catNames = new String[]{"src", "res", "savegames", "temp"};
         kat4newCat = "\\Games";
         mkDirMySvrl(point, pathMain, kat4newCat, catNames);
 
-             // 2 В каталоге src создайте две директории : main, test.
+        // 2 В каталоге src создайте две директории : main, test.
         point = 2;
         catNames = new String[]{"main", "test"};
         kat4newCat = "\\Games\\src";
         mkDirMySvrl(point, pathMain, kat4newCat, catNames);
 
-             // 3 В подкаталоге main создайте два файла: Main.java, Utils.java.
+        // 3 В подкаталоге main создайте два файла: Main.java, Utils.java.
         point = 3;
         fileNames = new String[]{"Main.java", "Utils.java"};
         kat4newFiles = "\\Games\\src";
         mkFileMySvrl(point, pathMain, kat4newFiles, fileNames);
 
-             // 4 В каталог res создайте три директории: drawables, vectors, icons.
+        // 4 В каталог res создайте три директории: drawables, vectors, icons.
         point = 4;
         catNames = new String[]{"drawables", "vectors", "icons"};
         kat4newCat = "\\Games\\res";
         mkDirMySvrl(point, pathMain, kat4newCat, catNames);
 
 
-             // 5 В директории temp создайте файл temp.txt.
+        // 5 В директории temp создайте файл temp.txt.
         point = 5;
         fileNames = new String[]{"temp.txt"};
         kat4newFiles = "\\Games\\temp";
         mkFileMySvrl(point, pathMain, kat4newFiles, fileNames);
 
 
-             // 6 выводим в консоль Лог
+        // 6 выводим в консоль Лог
         point = 6;
         System.out.println("\n" + "пункт " + point + " " + "шаг " + cnt++ +
                 " выводим Лог в консоль: " + "\n\n" +
                 log1);
 
-             // 7  запишем текст из Лога в  файл temp.txt с помощью класса FileWriter
+        // 7  запишем текст из Лога в  файл temp.txt с помощью класса FileWriter
         point = 7;
         String kat4TxtFile = "\\Games\\temp";
         fileNameToText = "temp.txt";
