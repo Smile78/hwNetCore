@@ -1,3 +1,22 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+
+zip_name.zip
+
+
+Games
+Games/
+**/Games
+
+
+saveXX.dat
+save*.dat
+save??.dat
+Games/savegames/saveXX.dat
+**/Games/savegames/saveXX.dat
+Games/**/saveXX.dat
+Games/**/*.dat
+
+
+
