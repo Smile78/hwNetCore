@@ -2,23 +2,5 @@
 /shelf/
 /workspace.xml
 
-zip_name.zip
-dateX.dat
-
-/src/netology/Core/t13StreamIO/hw131install/Games/
-
-Games
-Games/
-**/Games
-
-
-saveXX.dat
-save*.dat
-save??.dat
-Games/savegames/saveXX.dat
-**/Games/savegames/saveXX.dat
-Games/**/saveXX.dat
-Games/**/*.dat
-
 
 
